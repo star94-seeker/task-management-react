@@ -22,14 +22,14 @@ const App = () => {
 
   //Fetch Tasks
   const fetchTasks = async () => {
-    const res = await fetch('http://localhost:5000/tasks')
+    const res = await fetch('https://my-json-server.typicode.com/star94-seeker/taskdude-db/tasks')
     const data = await res.json()
     return data
   }
 
   //Fetch Single Task 
   const fetchTask = async (id) => {
-    const res = await fetch(`http://localhost:5000/tasks/${id}`)
+    const res = await fetch(`https://my-json-server.typicode.com/star94-seeker/taskdude-db/tasks/${id}`)
     const data = await res.json()
     return data
   }
@@ -37,7 +37,7 @@ const App = () => {
   // Add Task
   const addTask = async (task) => {
     const res = await fetch(
-      `http://localhost:5000/tasks`, {
+      `https://my-json-server.typicode.com/star94-seeker/taskdude-db/tasks`, {
       method: 'POST',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(task),
@@ -53,7 +53,7 @@ const App = () => {
 
   //Delete Task 
   const deleteTask = async (id) => {
-    await fetch(`http://localhost:5000/tasks/${id}`, { method: 'DELETE', })
+    await fetch(`https://my-json-server.typicode.com/star94-seeker/taskdude-db/tasks/${id}`, { method: 'DELETE', })
     setTasks(tasks.filter((task) => task.id !== id))
   }
 
@@ -67,7 +67,7 @@ const App = () => {
 
 
     const res = await fetch(
-      `http://localhost:5000/tasks/${id}`, {
+      `https://my-json-server.typicode.com/star94-seeker/taskdude-db/tasks/${id}`, {
       method: 'PUT',
       headers: { 'content-type': 'application/json' },
       body: JSON.stringify(updTask)

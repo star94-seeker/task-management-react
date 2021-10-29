@@ -8,7 +8,7 @@
     },
     {
       "id": 2,
-      "text": "Task 1",
+      "text": "Task 2",
       "day": "22 june 2021",
       "reminder": true
     },
@@ -25,9 +25,9 @@
       "id": 4
     },
     {
-      "text": "task 4",
+      "text": "task 5",
       "day": "22 dec 2021",
-      "reminder": false,
+      "reminder": true,
       "id": 5
     }
   ]
